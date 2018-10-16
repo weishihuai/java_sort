@@ -26,10 +26,11 @@ public class BubblingSortUtils {
      * @return 排序后的数组
      */
     public static int[] sort(int[] array) {
+        int length = array.length - 1;
         //外循环控制总共需要多少趟
-        for (int i = 0, len = array.length - 1; i < len; i++) {
+        for (int i = 0; i < length; i++) {
             //内层循环控制每一趟比较的次数
-            for (int j = 0, length = array.length - 1 - i; j < length; j++) {
+            for (int j = 0; j < length - i; j++) {
                 //后一个比前一个的值大，则交换位置
                 if (array[j] > array[j + 1]) {
                     //使用中间值进行交换
