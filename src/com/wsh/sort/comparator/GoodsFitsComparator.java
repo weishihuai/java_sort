@@ -11,6 +11,6 @@ public class GoodsFitsComparator implements Comparator<Goods> {
 
     @Override
     public int compare(Goods o1, Goods o2) {
-        return o1.getHits() - o2.getHits();
+        return o1.getHits() - o2.getHits() > 0 ? 1 : (o1.getHits() - o2.getHits() == 0 ? 0 : -1);
     }
 }
